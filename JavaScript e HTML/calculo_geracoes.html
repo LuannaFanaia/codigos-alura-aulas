@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script>
+	function pulaLinha() {
+		document.write("<br>");
+	}
+
+	function mostra(frase) {
+		document.write("<h2>"+frase+"</h2>");
+		pulaLinha();
+	}
+
+	var mediaDeGeracoes = 28;
+	var ano = 1500;
+	var anoAtual = 2022;
+	var geracoes = (anoAtual - ano)/mediaDeGeracoes;
+
+	mostra("Se passaram aproximadamente " + Math.round(geracoes) + " gerações.");
+
+</script>
