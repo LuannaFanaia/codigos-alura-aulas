@@ -1,11 +1,11 @@
 <meta charset="utf-8">
 <script>
 	function pulaLinha() {
-		document.write("<br>");
+		document.write("<br><hr>");
 	}
 
 	function mostra(frase) {
-		document.write(frase);
+		document.write("<big>" + frase + "</big>");
 		pulaLinha();
 	}
 
@@ -20,15 +20,16 @@
 	var pesoInformado = prompt(nome + ", informe seu peso:");
 	var imc = calculaImc(pesoInformado, alturaInformada);
 
-	document.write(nome + ", o seu imc calculado é " + imc + ".")
+	mostra(nome + ", o seu imc é " + imc + ".")
 
-
-	// var imcFlavio = calculaImc(73, 1.71);
-	// var imcAmigo = calculaImc(120, 1.69);
-	// var totalImc = imcFlavio + imcAmigo;
-
-	// mostra("O imc do Flávio é " + imcFlavio + ".");
-	// mostra("O imc do amigo é " + imcAmigo + ".");
-	// mostra("A soma dos imc's é " + totalImc + ".");
+	if(imc < 18.5) {
+		mostra("Você está abaixo do recomendado");
+	}
+	if(imc > 35) {
+		mostra("Você está acima do recomendado");
+	}
+	if(imc >= 18.5 && imc <= 35) {
+		mostra("O seu imc é está excelente!");
+	}
 	
 </script>
