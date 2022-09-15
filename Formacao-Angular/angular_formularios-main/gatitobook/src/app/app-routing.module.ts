@@ -14,7 +14,8 @@ const routes: Routes = [
     },
     {
         path: 'animais',
-        loadChildren: () => import('./animais/animais.module').then(m),
+        loadChildren: () =>
+            import('./animais/animais.module').then(m => m.AnimaisModule),
     },
 ];
 
