@@ -1,20 +1,9 @@
 import { SimpleChange, SimpleChanges } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Photo } from './interfaces/photo';
+
 import { PhotoBoardComponent } from './photo-board.component';
 import { PhotoBoardModule } from './photo-board.module';
-
-function buildPhotoList(): Photo[] {
-    const photos: Photo[] = [];
-    for (let i = 0; i < 8; i++) {
-        photos.push({
-            id: i + 1,
-            url: '',
-            description: '',
-        });
-    }
-    return photos;
-}
+import { buildPhotoList } from './test/build-photo-list';
 
 describe(PhotoBoardComponent.name, () => {
     let fixture: ComponentFixture<PhotoBoardComponent>;
@@ -29,7 +18,7 @@ describe(PhotoBoardComponent.name, () => {
         component = fixture.componentInstance;
     });
 
-    it(`Should display rows and columns when (@Input photos) has value`, () => {
+    it(`Should display rows and columns when (@Input photos) has value.`, () => {
         component.photos = buildPhotoList();
         fixture.detectChanges();
         const change: SimpleChanges = {

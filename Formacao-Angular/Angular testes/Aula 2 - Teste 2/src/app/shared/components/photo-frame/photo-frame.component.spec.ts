@@ -19,13 +19,13 @@ describe(PhotoFrameComponent.name, () => {
         component = fixture.componentInstance;
     });
 
-    it('Should create component', () => {
+    it('Should create component.', () => {
         expect(component).toBeTruthy();
     });
 
     it(`#${PhotoFrameComponent.prototype.like.name} 
     should trigger (@Output liked) once when called 
-    multiple times within debounce time`, fakeAsync(() => {
+    multiple times within debounce time.`, fakeAsync(() => {
         fixture.detectChanges();
         let times = 0;
         component.liked.subscribe(() => times++);
@@ -37,7 +37,7 @@ describe(PhotoFrameComponent.name, () => {
 
     it(`#${PhotoFrameComponent.prototype.like.name} 
     should trigger (@Output liked) two times when 
-    called outside debounce time`, fakeAsync(() => {
+    called outside debounce time.`, fakeAsync(() => {
         fixture.detectChanges();
         let times = 0;
         component.liked.subscribe(() => times++);
@@ -49,7 +49,7 @@ describe(PhotoFrameComponent.name, () => {
     }));
 
     it(`(D) Should display number of likes when (@Input likes) 
-    is incremented`, () => {
+    is incremented.`, () => {
         fixture.detectChanges();
         component.likes++;
         fixture.detectChanges();
@@ -59,7 +59,7 @@ describe(PhotoFrameComponent.name, () => {
     });
 
     it(`(D) Should update aria-label when (@Input likes) 
-    is incremented`, () => {
+    is incremented.`, () => {
         fixture.detectChanges();
         component.likes++;
         fixture.detectChanges();
@@ -68,7 +68,7 @@ describe(PhotoFrameComponent.name, () => {
         expect(element.getAttribute('aria-label')).toBe('1: people liked');
     });
 
-    it(`(D) Should have aria-label with 0 (@Input likes) value`, () => {
+    it(`(D) Should have aria-label with 0 (@Input likes) value.`, () => {
         fixture.detectChanges();
         const element: HTMLElement =
             fixture.nativeElement.querySelector('span');
@@ -76,7 +76,7 @@ describe(PhotoFrameComponent.name, () => {
     });
 
     it(`(D) Should display image with src and description 
-    when bound to properties`, () => {
+    when bound to properties.`, () => {
         const description = 'some description';
         const src = 'http://somesite.com/img.jpg';
         component.src = src;
@@ -88,7 +88,7 @@ describe(PhotoFrameComponent.name, () => {
         expect(img.getAttribute('alt')).toBe(description);
     });
 
-    it(`(D) Should display number of likes when clicked`, done => {
+    it(`(D) Should display number of likes when clicked.`, done => {
         fixture.detectChanges();
         component.liked.subscribe(() => {
             component.likes++;
@@ -103,7 +103,7 @@ describe(PhotoFrameComponent.name, () => {
         likeWidgetContainerEl.click();
     });
 
-    it(`(D) Should display number of likes when ENTER key is pressed`, done => {
+    it(`(D) Should display number of likes when ENTER key is pressed.`, done => {
         fixture.detectChanges();
         component.liked.subscribe(() => {
             component.likes++;

@@ -35,7 +35,7 @@ describe(PhotoBoardComponent.name + ' outros', () => {
         component = fixture.componentInstance;
     });
 
-    it(`Should display rows and columns when (@Input photos) has value`, () => {
+    it(`Should display rows and columns when (@Input photos) has value.`, () => {
         component.photos = buildPhotoList();
         fixture.detectChanges();
         expect(component.board.rows.length)

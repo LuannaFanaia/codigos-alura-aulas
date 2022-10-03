@@ -17,20 +17,21 @@ describe(ActionDirective.name, () => {
     });
 
     it(`(D) (@Output appAction) should emit event with payload when 
-    ENTER key is pressed`, () => {
-        const divEl: HTMLElement = fixture.nativeElement.querySelector('.dummy-component');
-        const event = new KeyboardEvent('keyup', {key: 'Enter'});
+    ENTER key is pressed.`, () => {
+        const divEl: HTMLElement =
+            fixture.nativeElement.querySelector('.dummy-component');
+        const event = new KeyboardEvent('keyup', { key: 'Enter' });
         divEl.dispatchEvent(event);
-        expect(component.hasEvent()).toBe(true); 
+        expect(component.hasEvent()).toBe(true);
     });
 
-    it(`(D) (@Output appAction) should emit event with payload when clicked`, () => {
-        const divEl: HTMLElement = fixture.nativeElement.querySelector('.dummy-component');
+    it(`(D) (@Output appAction) should emit event with payload when clicked.`, () => {
+        const divEl: HTMLElement =
+            fixture.nativeElement.querySelector('.dummy-component');
         const event = new Event('click');
         divEl.dispatchEvent(event);
-        expect(component.hasEvent()).toBe(true); 
-    })
-
+        expect(component.hasEvent()).toBe(true);
+    });
 });
 
 @Component({
