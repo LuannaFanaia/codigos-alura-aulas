@@ -2,6 +2,35 @@
 	margin-top: 20px;
 }
 
+html, body {
+	height: 100%;
+}
+
+header {
+	background-image: url(../img/castelo.jpg);
+	background-size: cover;
+	background-position: top center;
+	height: 100%;
+	position: relative;
+}
+
+header h1 {
+	margin: 0;
+}
+
+.topCasaFina-banner {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 20px;
+	width: 80%;
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: .3s;
+}
+
 .titulo-depoimentos {
 	background-color: #0275D8;
 	padding-top: 25px;
@@ -26,7 +55,7 @@ footer {
 	margin-top: 10px;
 	background-color: #333;
 	color: white;
-	padding: 20px;
+	padding: 1em;
 }
 
 footer address:last-child {
