@@ -137,3 +137,23 @@ button[disabled=disabled], button:disabled {
 	background-color: lightcoral;
 	color: white;
 }
+
+#mensagens-erro {
+	color: red;
+	font-weight: 600;
+}
+
+.fadeOut {
+	opacity: 0;
+	transition: 0.5s;
+}
+
+#filtrar-tabela {
+	width: 20vw;
+	height: 5vh;
+	margin-bottom: 0.5em;
+}
+
+.invisivel {
+	display: none;
+}
